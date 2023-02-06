@@ -8,7 +8,7 @@ pip install gym[classic_control]
 pip install gym[box2d]
 ```
 
-You may or may not need to install some of the packages manually. In my case, in addition to following the instructions, I had to run:
+Second, you may or may not need to install some of the packages manually. In my case, in addition to following the instructions, I had to run:
 ```
 pip install torch
 ```
@@ -21,5 +21,22 @@ Also, make sure to install pandas:
 pip install pandas
 ```
 
-## Running the code
-The main code is contained in notebook [Navigation_Solution.ipynb](./Navigation_Solution.ipynb).
+Third, we need to download the environment:
+* Linux: [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
+* Mac OS: [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
+* Windows (32-bit): [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
+* Windows (64-bit): [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
+
+## Using this repository
+The main code is contained in notebook [Navigation_Solution.ipynb](./Navigation_Solution.ipynb).[^1] The code for the agend is in [agent.py](./agent.py) and the policy model is defined in [model.py](./model.py). File [checkpoint.pth](./checkpoint.pth) contains the weights corresponding to a trained agent. See [report.md](./report.md) for an outline of the implementation, training statistics and ideas for further improvements.
+
+
+## Problem description
+In this problem the agent moves along a 2D plane using one of the four actions at each step:
+- `0` - walk forward 
+- `1` - walk backward
+- `2` - turn left
+- `3` - turn right
+
+[^1]: Keep in mind that you may not always be able to restart the environment after closing it. In those cases, restarting the kernel should help.
+
