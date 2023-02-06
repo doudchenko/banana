@@ -22,10 +22,10 @@ pip install pandas
 ```
 
 Third, we need to download the environment:
-* Linux: [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
-* Mac OS: [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
-* Windows (32-bit): [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
-* Windows (64-bit): [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
+- Linux: [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
+- Mac OS: [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
+- Windows (32-bit): [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
+- Windows (64-bit): [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
 
 ## Using this repository
 The main code is contained in notebook [Navigation_Solution.ipynb](./Navigation_Solution.ipynb).[^1] The code for the agend is in [agent.py](./agent.py) and the policy model is defined in [model.py](./model.py). File [checkpoint.pth](./checkpoint.pth) contains the weights corresponding to a trained agent. See [report.md](./report.md) for an outline of the implementation, training statistics and ideas for further improvements.
@@ -37,6 +37,10 @@ In this problem the agent moves along a 2D plane using one of the four actions a
 - `1` - walk backward
 - `2` - turn left
 - `3` - turn right
+
+When the agent runs into a banana, they collect it. Yellow bananas provide the reward of `+1` while blue bananas have the reward of `-1`.
+
+The state is described by a `37`-dimensional vector containing agent's velocity and data on the ray-based perception of objects around agent's forward direction.
 
 [^1]: Keep in mind that you may not always be able to restart the environment after closing it. In those cases, restarting the kernel should help.
 
