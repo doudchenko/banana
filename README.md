@@ -16,5 +16,10 @@ and
 ```
 pip install unityagents
 ```
+Also, make sure to install pandas:
+```
+pip install pandas
+```
 
-
+## Running the code
+The main code is contained in notebook [Navigation_Solution.ipynb](./Navigation_Solution.ipynb).
