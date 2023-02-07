@@ -12,3 +12,6 @@ The snippet below shows the performance of a trained agent:\
 ### Deep Q-Network
 We use a [dueling DQN approach](https://arxiv.org/abs/1511.06581) with two hidden layers having 64 units each, one layer corresponding to state levels and one to advantage values. The figure below shows the network architecture:\
 <img src="dqn_graph.png" width="400"/>
+
+### Prioritized experience replay
+We also use prioritized experience replay to upsample the experience tuples that lead to the largest---in absolute value---training errors, $\delta_i$.
