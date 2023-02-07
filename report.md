@@ -14,9 +14,14 @@ We use a [dueling DQN approach](https://arxiv.org/abs/1511.06581) with two hidde
 <img src="dqn_graph.png" width="400"/>
 
 ### Prioritized experience replay
-We also use prioritized experience replay to upsample the experience tuples that lead to the largest—in absolute value—temporal difference (TD) errors, $\delta_i$. The exact approach we use is the following:
+We also use [prioritized experience replay](https://arxiv.org/abs/1511.05952) to upsample the experience tuples that lead to the largest—in absolute value—temporal difference (TD) errors, $\delta_i$. The exact approach we use is the following:
 1. Given the TD errors, $\delta_i$, compute the sampling probabilities:
 $$P(i) = \frac{p_i^a}{\sum_j p_j^a},$$
 where $p_i = \|\delta_i\| + e$ and $a$ and $e$ are hyperparameters.
 2. The update rule for the network weights, $w$, is modified as:
-$$\Delta w = \alpha\left(\frac{1}{n}\cdot\frac{1}{P(i)}\right)^b\delta_i\nabla_w\hat{q}(S_i,A_i,w)$$
+$$\Delta w = \alpha\left(\frac{1}{n}\cdot\frac{1}{P(i)}\right)^b\delta_i\nabla_w\hat{q}(S_i,A_i,w)$$,
+where $n$ is the batch size and $b$ is a hyperparameter.
+
+### Double DQN
+We implement a [double DQN](https://arxiv.org/abs/1509.06461) so that the TD errors are computed as:
+$$\delta_i = R + \gamma\hat{q}\left(S', \argmax_{A'}\hat{q}(S',A',w),w\right) - \hat{q}(S,A,w)$$
