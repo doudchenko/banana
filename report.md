@@ -41,3 +41,6 @@ There are a number of hyperparameters used in this implementation:
 | $\varepsilon_0$ | $1.0$       | Starting value for the greedy-policy probability parameter.         |
 | $\varepsilon_1$ | $0.01$      | Ending value for the greedy-policy probability parameter.           |
 | $r_\varepsilon$ | $0.995$     | Multiplicative rate used for decreasing $\varepsilon$.              |
+
+## Results
+The agent is trained (achieves the average score above `13` over 100 consecutive episodes).
