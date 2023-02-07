@@ -43,8 +43,8 @@ There are a number of hyperparameters used in this implementation:
 | $r_\varepsilon$ | $0.995$     | Multiplicative rate used for decreasing $\varepsilon$.              |
 
 ## Results
-The agent is trained (achieves the average score above `13` over 100 consecutive episodes) in 461 episodes. The figure below plots the scores over the training period:
-<img src="dqn_graph.png" width="600"/>
+The agent is trained (achieves the average score above `13` over 100 consecutive episodes) in 461 episodes. The figure below plots the scores over the training period:\
+<img src="scores.png" width="600"/>
 
 ## Further improvements
 1. Neither of the hyperparameters are currently tuned. We should be able
