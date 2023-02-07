@@ -47,4 +47,4 @@ The agent is trained (achieves the average score above `13` over 100 consecutive
 <img src="scores.png" width="500"/>
 
 ## Further improvements
-1. Neither of the hyperparameters are currently tuned. We should be able
+Neither of the hyperparameters are currently tuned at all. We should be able to improve the performance by tuning those.
