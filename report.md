@@ -18,5 +18,5 @@ We also use prioritized experience replay to upsample the experience tuples that
 1. Given the TD errors, $\delta_i$, compute the sampling probabilities:
 $$P(i) = \frac{p_i^a}{\sum_j p_j^a},$$
 where $p_i = \|\delta_i\| + e$ and $a$ and $e$ are hyperparameters.
-2. The update rule for the network weights is modified as:
-$$\Delta w = \alpha\left(\frac{1}{n}\cdot\frac{1}{P(i)}\right)^b$$
+2. The update rule for the network weights, $w$, is modified as:
+$$\Delta w = \alpha\left(\frac{1}{n}\cdot\frac{1}{P(i)}\right)^b\delta_i\Nabla_w\hat{q}(S_i,A_i,w)$$
