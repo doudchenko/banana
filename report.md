@@ -19,4 +19,4 @@ We also use prioritized experience replay to upsample the experience tuples that
 $$P(i) = \frac{p_i^a}{\sum_j p_j^a},$$
 where $p_i = \|\delta_i\| + e$ and $a$ and $e$ are hyperparameters.
 2. The update rule for the network weights, $w$, is modified as:
-$$\Delta w = \alpha\left(\frac{1}{n}\cdot\frac{1}{P(i)}\right)^b\delta_i\Nabla_w\hat{q}(S_i,A_i,w)$$
+$$\Delta w = \alpha\left(\frac{1}{n}\cdot\frac{1}{P(i)}\right)^b\delta_i\nabla_w\hat{q}(S_i,A_i,w)$$
