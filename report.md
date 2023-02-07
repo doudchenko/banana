@@ -24,4 +24,4 @@ where $n$ is the batch size and $b$ is a hyperparameter.
 
 ### Double DQN
 We implement a [double DQN](https://arxiv.org/abs/1509.06461) so that the TD errors are computed as:
-$$\delta_i = R + \gamma\hat{q}\left(S', \arg\max_\nolimits{A'}\ {\hat{q}(S',A',w)},w\right) - \hat{q}(S,A,w)$$
+$$\delta_i = R + \gamma\hat{q}\left(S', \arg\max_\nolimits{A'}\ \left{\hat{q}(S',A',w)\right},w\right) - \hat{q}(S,A,w)$$
