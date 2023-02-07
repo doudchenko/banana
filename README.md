@@ -42,5 +42,7 @@ When the agent runs into a banana, they collect it. Yellow bananas provide the r
 
 The state is described by a `37`-dimensional vector containing agent's velocity and data on the ray-based perception of objects around agent's forward direction.
 
+The agend is considered trained if they achieve an average score above `13.0` over 100 consecutive episodes. 
+
 [^1]: Keep in mind that you may not always be able to restart the environment after closing it. In those cases, restarting the kernel should help.
 
