@@ -44,7 +44,7 @@ There are a number of hyperparameters used in this implementation:
 
 ## Results
 The agent is trained (achieves the average score above `13` over 100 consecutive episodes) in 461 episodes. The figure below plots the scores over the training period:\
-<img src="scores.png" width="600"/>
+<img src="scores.png" width="500"/>
 
 ## Further improvements
 1. Neither of the hyperparameters are currently tuned. We should be able
