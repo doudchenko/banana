@@ -17,4 +17,6 @@ We use a [dueling DQN approach](https://arxiv.org/abs/1511.06581) with two hidde
 We also use prioritized experience replay to upsample the experience tuples that lead to the largest—in absolute value—temporal difference (TD) errors, $\delta_i$. The exact approach we use is the following:
 1. Given the TD errors, $\delta_i$, compute the sampling probabilities:
 $$P(i) = \frac{p_i^a}{\sum_j p_j^a},$$
-where
+where $p_i = \|\delta_i\| + e$ and $a$ and $e$ are hyperparameters.
+2. The update rule for the network weights is modified as:
+$$\Delta w = \alpha\left(\frac{1}{n}\cdot\frac{1}{P(i)}\right)^b$$
