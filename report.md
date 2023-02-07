@@ -19,10 +19,10 @@ We also use [prioritized experience replay](https://arxiv.org/abs/1511.05952) to
 $$P(i) = \frac{p_i^a}{\sum_j p_j^a},$$
 where $p_i = \|\delta_i\| + e$ and $a$ and $e$ are hyperparameters.
 2. The update rule for the network weights, $w$, is modified as:
-$$\Delta w = \alpha\left(\frac{1}{n}\cdot\frac{1}{P(i)}\right)^b\delta_i\nabla_w\hat{q}(S_i,A_i,w)$$,
+$$\Delta w = \alpha\left(\frac{1}{n}\cdot\frac{1}{P(i)}\right)^b\delta_i\nabla_w\hat{q}(S_i,A_i,w),$$
 where $n$ is the batch size and $b$ is a hyperparameter.
 
 ### Double DQN
 We implement a [double DQN](https://arxiv.org/abs/1509.06461) so that the TD errors are computed as:
-$$\delta_i = R + \gamma\hat{q}\left(S', \arg\max_\nolimits{A'}\\,\hat{q}(S',A',\tilde{w}),w\right) - \hat{q}(S,A,\tilde{w})$$,
+$$\delta_i = R + \gamma\hat{q}\left(S', \arg\max_\nolimits{A'}\\,\hat{q}(S',A',\tilde{w}),w\right) - \hat{q}(S,A,\tilde{w}),$$
 where $\gamma$ is the discount factor, $w$ is the "target" set of weights and $\tilde{w}$ is the "local" set of weights.
