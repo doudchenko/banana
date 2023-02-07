@@ -14,4 +14,4 @@ We use a [dueling DQN approach](https://arxiv.org/abs/1511.06581) with two hidde
 <img src="dqn_graph.png" width="400"/>
 
 ### Prioritized experience replay
-We also use prioritized experience replay to upsample the experience tuples that lead to the largest---in absolute value---training errors, $\delta_i$.
+We also use prioritized experience replay to upsample the experience tuples that lead to the largest—in absolute value—training errors, $\delta_i$.
